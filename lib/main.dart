@@ -11,21 +11,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
@@ -36,9 +31,31 @@ class MyHomePage extends StatelessWidget {
               "winking.png",
               fit: BoxFit.contain,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                PaddedIcon(
+                  Icons.share,
+                ),
+                PaddedIcon(
+                  Icons.add,
+                ),
+                PaddedIcon(
+                  Icons.close,
+                ),
+              ],
+            )
           ],
         ),
       ),
     );
   }
 }
+
+Widget PaddedIcon(IconData iconData) => Padding(
+  padding: const EdgeInsets.all(32.0),
+  child: Icon(
+    iconData,
+    color: Colors.red,
+  ),
+);
