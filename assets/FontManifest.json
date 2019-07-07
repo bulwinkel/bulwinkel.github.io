@@ -1,0 +1,34 @@
+[
+  {
+    "family": "MaterialIcons",
+    "fonts": [
+      {
+        "asset": "https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+      }
+    ]
+  },
+  {
+    "family": "FontAwesomeBrands",
+    "fonts": [
+      {
+        "asset": "fa-brands-400.ttf"
+      }
+    ]
+  },
+  {
+    "family": "FontAwesomeSolid",
+    "fonts": [
+      {
+        "asset": "fa-solid-900.ttf"
+      }
+    ]
+  },
+  {
+    "family": "FontAwesomeRegular",
+    "fonts": [
+      {
+        "asset": "fa-regular-400.ttf"
+      }
+    ]
+  }
+]
