@@ -1,4 +1,5 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 
 void main() => runApp(MyApp());
 
@@ -38,14 +39,17 @@ class MyHomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                PaddedIcon(
-                  githubIcon,
+                PaddedIconButton(
+                    iconData: githubIcon,
+                    onPressed: () => html.window.open("https://github.com/bulwinkel", "github")
                 ),
-                PaddedIcon(
-                  twitterIcon,
+                PaddedIconButton(
+                    iconData: twitterIcon,
+                    onPressed: () => html.window.open("https://twitter.com/kelvinbulwinkel", "twitter")
                 ),
-                PaddedIcon(
-                  linkedinIcon,
+                PaddedIconButton(
+                    iconData: linkedinIcon,
+                    onPressed: () => html.window.open("https://www.linkedin.com/in/bulwinkel/", "linkedin")
                 ),
               ],
             )
@@ -56,10 +60,11 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-Widget PaddedIcon(IconData iconData) => Padding(
+Widget PaddedIconButton({IconData iconData, VoidCallback onPressed}) => Padding(
   padding: const EdgeInsets.all(32.0),
-  child: Icon(
-    iconData,
+  child: IconButton(
+    icon: Icon(iconData),
     color: Color.fromRGBO(153, 102, 251, 1),
+    onPressed: onPressed,
   ),
 );
