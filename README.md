@@ -6,7 +6,7 @@ Dev
 ===
 Stateless hot reload:
 ```shell script
-webdev serve --auto restart
+flutter packages run webdev serve --auto restart
 ```
 
 Releasing
