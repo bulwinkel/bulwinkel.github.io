@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
+const twitterIcon = IconData(0xf081, fontFamily: "FontAwesomeBrands");
+const linkedinIcon = IconData(0xf08c, fontFamily: "FontAwesomeBrands");
+const githubIcon = IconData(0xf092, fontFamily: "FontAwesomeBrands");
+
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key key}) : super(key: key);
 
@@ -35,13 +39,13 @@ class MyHomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 PaddedIcon(
-                  Icons.share,
+                  githubIcon,
                 ),
                 PaddedIcon(
-                  Icons.add,
+                  twitterIcon,
                 ),
                 PaddedIcon(
-                  Icons.close,
+                  linkedinIcon,
                 ),
               ],
             )
@@ -56,6 +60,6 @@ Widget PaddedIcon(IconData iconData) => Padding(
   padding: const EdgeInsets.all(32.0),
   child: Icon(
     iconData,
-    color: Colors.red,
+    color: Color.fromRGBO(153, 102, 251, 1),
   ),
 );
