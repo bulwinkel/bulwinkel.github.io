@@ -15,5 +15,5 @@ Requires [peanut](https://pub.dev/packages/peanut)
 
 From the `dev` branch run:
 ```shell script
-peanut -b master
+flutter packages run peanut -b master 
 ```

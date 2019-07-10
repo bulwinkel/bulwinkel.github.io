@@ -63,8 +63,9 @@ class MyHomePage extends StatelessWidget {
 Widget PaddedIconButton({IconData iconData, VoidCallback onPressed}) => Padding(
   padding: const EdgeInsets.all(32.0),
   child: IconButton(
+    iconSize: 48,
     icon: Icon(iconData),
-    color: Color.fromRGBO(153, 102, 251, 1),
+    color: Color.fromRGBO(148, 99, 243, 1),
     onPressed: onPressed,
   ),
 );
